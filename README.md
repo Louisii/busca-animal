@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Busca Animal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação em react.js que utiliza uma api de dados sobre animais. O usuario pode pesquisar o nome do animal desejado e então ter acesso a diversas informações sobre esse animal.
+api: <a href="https://api-ninjas.com/api/animals">https://api-ninjas.com/api/animals</a>
 
 ## Available Scripts
 
