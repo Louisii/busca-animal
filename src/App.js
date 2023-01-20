@@ -1,7 +1,16 @@
 import Nav from './components/Nav'
-import api from './api.js'
+import getAnimals from './api.js'
+import { useState, useEffect } from 'react'
 
-function App() {
+const App = () => {
+
+  //const[animals, setAnimals] = useState([])
+  
+ /*  useEffect(() => {
+    getAnimals('deer')
+  }, []) */
+
+
 
   return (
     <section className="bg-primary h-screen">
