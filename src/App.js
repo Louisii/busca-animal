@@ -43,7 +43,7 @@ const App = () => {
       <div>
         <h1>Animal Info</h1>
         <div>
-          {JSON.stringify(animalData) != '{}' ? 
+          {JSON.stringify(animalData) !== '{}' ? 
           <>
           <p>name: {animalData[0].name}</p>
           <p>locations: {animalData[0].locations}</p>  
