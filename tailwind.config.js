@@ -10,6 +10,9 @@ module.exports = {
       secundary: '#DC85C0',
       white: '#ffffff',
     },
+    container: {
+      center: true,
+    },
     extend: {},
   },
   plugins: [],
