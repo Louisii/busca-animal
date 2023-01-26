@@ -2,6 +2,7 @@ import axios from "axios"
 import React, { useState } from "react"
 import Button from "./components/Button"
 import TextInput from "./components/TextInput"
+import AnimalData from "./components/AnimalData"
 import logo from './assets/logo.png'
 
 const App = () => {
@@ -47,15 +48,46 @@ const App = () => {
       <div className="md:flex items-center justify-center pt-5">
         <ul>
 
-          <li className="md:inline-block md:ml-10 ml-10 pt-2">
-            <h1>Animal Info</h1>
-          </li>
-
-          <li className="md:inline-block md:ml-10 ml-10 pt-2">
+          <li className="md:inline-block pt-2">
             {(JSON.stringify(animalData) !== '{}') && (animalData.length !== 0) ?
               <>
-                <p>name: {animalData[0].name}</p>
-                <p>locations: {animalData[0].locations}</p>
+
+                <div className="bg-white p-4 rounded m-3">
+
+                  <h1 className="text-xl font-medium">{animalData[0].name}</h1>
+                  {animalData[0].characteristics.slogan}
+                  <br/>
+                  <div className="display: block mt-4 mx-3">
+                    <AnimalData title={"Locations"} data={animalData[0].locations} />
+                    <AnimalData title={"Prey"} data={animalData[0].characteristics.main_prey} />
+                    <AnimalData title={"Distinctive Feature"} data={animalData[0].characteristics.distinctive_feature} />
+                    <AnimalData title={"Habitat"} data={animalData[0].characteristics.habitat} />
+                    <AnimalData title={"Predators"} data={animalData[0].characteristics.predators} />
+                    <AnimalData title={"Diet"} data={animalData[0].characteristics.diet} />
+                    <AnimalData title={"Favorite Food"} data={animalData[0].characteristics.favorite_food} />
+                    <AnimalData title={"Color"} data={animalData[0].characteristics.color} />
+                    <AnimalData title={"Skin type"} data={animalData[0].characteristics.skin_type} />
+                    <AnimalData title={"Lifespan"} data={animalData[0].characteristics.lifespan} />
+                    <AnimalData title={"Weight"} data={animalData[0].characteristics.weight} />
+                    <AnimalData title={"Height"} data={animalData[0].characteristics.height} />
+                    <br/>
+                    <b className="font-medium">Taxonomy</b>
+                    <AnimalData title={"kingdom"} data={animalData[0].taxonomy.kingdom} />
+                    <AnimalData title={"Phylum"} data={animalData[0].taxonomy.phylum} />
+                    <AnimalData title={"Class"} data={animalData[0].taxonomy.class} />
+                    <AnimalData title={"Order"} data={animalData[0].taxonomy.order} />
+                    <AnimalData title={"Family"} data={animalData[0].taxonomy.family} />
+                    <AnimalData title={"Genus"} data={animalData[0].taxonomy.genus} />
+                    <AnimalData title={"Scientific Name"} data={animalData[0].taxonomy.scientific_name} />
+                    
+
+                  
+                  </div>
+                 
+
+                </div>
+
+
               </>
               :
               <><p>no animal data</p></>
